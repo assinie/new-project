@@ -7,8 +7,10 @@
 .include "telestrat.inc"
 .include "fcntl.inc"
 
-XMAINARGS = $2C
-XGETARGV = $2E
+.ifndef XMAINARGS
+	XMAINARGS = $2C
+	XGETARGV = $2E
+.endif
 
 ;----------------------------------------------------------------------
 ;			includes SDK
@@ -39,7 +41,7 @@ XGETARGV = $2E
 ;----------------------------------------------------------------------
 ;			Defines / Constantes
 ;----------------------------------------------------------------------
-VERSION = $20232011
+VERSION = $20244012
 .define PROGNAME "hello"
 
 ;----------------------------------------------------------------------
